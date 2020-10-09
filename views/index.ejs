@@ -2,15 +2,181 @@
 
 <%- include partials/main_nav.ejs %>
 <!--Main content-->
-<main class="container">
-<div class="jumbotron">
-  <h1 class="display-4">Welcome to the <%= title %> page!</h1>
-</div>
+<!-- Home Page --> 
+<section> 
+  <% if (title == "Home") { %>
+    <main>
+    <div class="container"></div>
+      <style>
+        body {
+          background-image: url('./Assets/images/bgintro.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          }
+      </style>   
+        <h1 class="display-4">WELCOME!</h1>
+        <br>
+        <h2>Welcome to my website</h2>
 
-<div>
-  <h2>hasdfasdfadsf</h2>
-</div>
-</main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>
+        <h4>
+            My mission is...<br>
+          <br>
+            To inspire positive change through having fun and sharing happiness” <br>
+          <br>
+            To create opportunities for today’s youth.” <br>
+          <br>
+            To encourage, engage, and equip others to believe in the possibilities.<br>
+          <br>
+            To positively impact the life of every person I meet.<br>
+          <br>
+            To encourage everyone I interact with on a daily basis.<br>
+          <br>
+            To live through my own battles especially my own depression and inspire others.<br>
+        </h4>
+        </p>
+      </div>
+    </div>
+  </main>
+  <% } else { %>
+  <% } %>
+</section>
+<!-- About Page --> 
+<section> 
+  <% if (title == "About") { %>
+    <main>
+      <p>
+        <img src=./Assets/images/MePhoto.jpg width=500 height=500>
+      </p>
+    <div class="container"></div>
+      <div class="jumbotron">      
+        <h1 class="display-4">Hello! I'm Jason</h1><br>
+        <p>
+          Hello, my name is Jason Yu and I am born profound deaf. Born in Canada on June 1996 and my ethnicity is Chinese.<br>
+          I love to watch tv shows such as Umbrella Academy, Designated survivor, and Blacklist.<br>
+          I recently started playing games to interact with my friends during pandemic. The games I play are League of Legends, Maplestory, and Left 4 Dead 2.<br>
+        </p>
+      </div>
+    </div>
+  </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+<!-- Projects Page --> 
+<section> 
+  <% if (title == "Projects") { %>
+    <main>
+      <div class="container"></div>
+        <div class="jumbotron">      
+          <h1 class="display-4">My projects</h1>
+          <p>I am very new to software engineering therefore, I do not have a lot of software related projects but here are some things that I am proud of in past couple years</p>
+        </div>
+      </div>
+      <table class="table table-borderless" style="width: 80%; margin-left: auto; margin-right: auto;" id="projectsTable">
+        <tr>
+          <td style="width: 35%;"><a href="http://studentweb.cencol.ca/jyu158" target="_blank"><img src="./Assets/images/puppy.jpg" alt="Project1" width="320px"></a></td>
+          <td>
+            <h5>First ever website made</h5>
+            
+            As a Centennial student, I managed to get the most out of the website creation program which is "Microsoft Expression Web 4". It took a long time to figure what each tool and how to make the most of it. Click on the image on the left to check out my main website I made for previous semester.
+          </td>
+        </tr>
+      
+        <tr>
+          <td style="width: 35%;"><a href="http://studentweb.cencol.ca/jyu158/Comp125%20Assignment%204/Membership.html" target="_blank"><img src="./Assets/images/signup.jpg" alt="Project2" width="320px"></a></td>
+          <td>
+            <h5>Website registration</h5>
+            In addition, I have made another project and added onto my main website. This project is about getting users to make a new account on my website. Click on the sign up image on the left to register a new account.
+          </td>
+        </tr>
+        <tr>
+          <td style="width: 35%;"><a href="http://studentweb.cencol.ca/jyu158/Comp125%20Assignment%201/Assignment%201.html/" target="_blank"><img src="./Assets/images/calculator.png" alt="Project1" width="320px"></a></td>
+          <td>
+            <h5>Created BMR calculator</h5>
+            
+             This tool allows users to calculate their BMR (Basal metabolic rate) to maintain their needs of calories in order to keep body functioning at rest. Click on the calculator image on the left to see the tool I've made.
+          </td>
+        </tr>>
+    
+    </table>
+    <br>
+    </main>
+  <% } else { %>
+  <% } %>
+</section>
+<!-- Services Page --> 
+<section> 
+  <% if (title == "Services") { %>
+    <main>>
+    <div class="container"></div>
+      <div class="jumbotron">
+        <h1>Welcome to <%= title %></h1>
+        <h1 class="display-4">Hello there!</h1>
+        <h3>
+          Here are my services that I can offer as a Centennial student
+        </h3>
+        <p>
+          <img src="./Assets/images/WebDesign.jpg" width=400><br>
+          Develop a website<br>
+          <br>
+          <img src="./Assets/images/Coding.jpg" width=400><br>
+          My coding language is C#, HTML, Javascript, CSS, and Java.<br>
+          <br>
+          <img src="./Assets/images/Programming.jpg" width=400><br>
+          <br>
+          Build a program for your needs<br>
+          <img src="./Assets/images/math.png" width=400><br>
+          Math help<br>
+        </p>
+      </div>
+    </div>
+  </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+<!-- Contact Us Page --> 
+<section> 
+  <% if (title == "Contact") { %>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <br>
+            <h1 class="display-4">Contact me</h1>
+            <br>
+            <form action="index.html">
+              <div class="form-group">
+                <label for="nameLabel">Name</label>
+                <input type="text" class="form-control" id="nameLabel" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="shortMessage">Message</label>
+                <textarea class="form-control" id="shortMessage" rows="3" placeholder="Feel free to write us a message"></textarea>
+              </div>
+              <input type="submit" value="Submit" class="btn btn-info">
+            </form>
+          </div>
+        </div>
+      </div>      
+    </main> 
+  <% } else { %>
+  <% } %>
+</section>>
 
 <%- include partials/bottom_nav.ejs %>
 
